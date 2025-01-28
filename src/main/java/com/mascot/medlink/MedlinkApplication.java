@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class MedlinkApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(MedlinkApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(MedlinkApplication.class, args);
+    }
 
 }
