@@ -1,4 +1,4 @@
-package com.mascot.medlink.model;
+package com.mascot.medlink.model.entity;
 
 
 import lombok.AllArgsConstructor;
