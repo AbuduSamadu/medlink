@@ -16,6 +16,9 @@ import java.util.Set;
 public class UserDTO {
     private Long userId;
     private String email;
+    private String firstName;
+    private String lastName;
+    private String userName;
     private String contact;
     private Set<UserRole> roles;
     private LocalDateTime createdAt;
