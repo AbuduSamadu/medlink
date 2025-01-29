@@ -8,6 +8,9 @@ public class UserMapper {
         //Convert User entity to userDTO
         return new UserDTO(
                 user.getUserId(),
+                user.getFirstName(),
+                user.getLastName(),
+                user.getUserName(),
                 user.getEmail(),
                 user.getContact(),
                 user.getRoles(),
