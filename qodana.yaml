@@ -1,3 +1,10 @@
 version: "1.0"
+
 profile:
   name: qodana.starter
+linter: jetbrains/qodana-jvm:2024.3
+profile:
+  name: qodana.recommended
+include:
+  - name: CheckDependencyLicenses
+
