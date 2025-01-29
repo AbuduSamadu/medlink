@@ -1,25 +1,28 @@
 package com.mascot.medlink.model.dto;
 
 import com.mascot.medlink.model.enums.UserRole;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
-import java.util.HashSet;
+import java.util.Collections;
 import java.util.Set;
 
 
 
-@Data
+@Getter
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserDTO {
     private Long userId;
     private String email;
     private String contact;
-    private String password;
-    private Set<UserRole> roles = new HashSet<>();
+    private Set<UserRole> roles;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+
+
+    public Set<UserRole> getRoles() {
+        return roles != null ? Collections.unmodifiableSet(roles): Collections.emptySet();
+    }
 }

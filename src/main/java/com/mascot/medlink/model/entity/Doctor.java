@@ -14,7 +14,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "doctors")
 public class Doctor extends User {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)

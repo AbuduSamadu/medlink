@@ -2,11 +2,11 @@ package com.mascot.medlink.model.dto;
 
 import com.mascot.medlink.model.enums.ClinicHospital;
 import com.mascot.medlink.model.enums.DoctorSpecialization;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
-@Data
+@Getter
+@SuperBuilder
 @AllArgsConstructor
 @NoArgsConstructor
 public class DoctorDTO extends UserDTO{

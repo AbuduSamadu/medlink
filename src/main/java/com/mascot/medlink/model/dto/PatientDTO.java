@@ -1,19 +1,21 @@
 package com.mascot.medlink.model.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDate;
 
-
-@EqualsAndHashCode(callSuper = true)
-@Data
-@AllArgsConstructor
+@Getter
+@SuperBuilder
 @NoArgsConstructor
+@AllArgsConstructor
 public class PatientDTO extends  UserDTO{
     private String medicalHistory;
     private LocalDate dateOfBirth;
-    private int emergencyContact;
+    private String emergencyContact;
+
+    public String getMedicalHistory(){
+        return  medicalHistory != null ? medicalHistory : "No medical History available";
+    }
+
 }
