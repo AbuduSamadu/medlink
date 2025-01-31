@@ -1,6 +1,6 @@
 package com.mascot.medlink.model.entity;
 
-import com.mascot.medlink.model.enums.UserRole;
+
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -43,11 +43,12 @@ public class User {
     @Column(nullable = false)
     private String contact;
 
-    @ElementCollection(targetClass = UserRole.class, fetch = FetchType.EAGER)
-    @Enumerated(EnumType.STRING)
-    @CollectionTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"))
-    @Column(name = "role", nullable = false)
-    private Set<UserRole> roles = new HashSet<>();
+  @ManyToMany(fetch = FetchType.EAGER)
+  @JoinTable(
+          name = "user_roles",
+          joinColumns = @JoinColumn(name = "user_id"),
+          inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<Role> roles = new HashSet<>();
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false, updatable = false)
