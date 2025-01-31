@@ -1,6 +1,6 @@
 package com.mascot.medlink.model.dto;
 
-import com.mascot.medlink.model.enums.UserRole;
+import com.mascot.medlink.model.entity.Role;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
@@ -21,12 +21,12 @@ public class UserDTO {
     private String lastName;
     private String userName;
     private String contact;
-    private Set<UserRole> roles;
+    private Set<Role> roles;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
 
-    public Set<UserRole> getRoles() {
+    public Set<Role> getRoles() {
         return roles != null ? Collections.unmodifiableSet(roles): Collections.emptySet();
     }
 }

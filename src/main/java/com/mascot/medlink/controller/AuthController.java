@@ -6,4 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
+    @RequestMapping
+    public String greeting(){
+        return "Hello world";
+    }
 }
