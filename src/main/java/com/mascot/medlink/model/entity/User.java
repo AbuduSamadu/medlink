@@ -3,9 +3,9 @@ package com.mascot.medlink.model.entity;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
@@ -13,7 +13,7 @@ import java.util.Set;
 
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
+@SuperBuilder
 @Entity
 @Table(name="users", indexes = {
         @Index(name = "idx_user_email", columnList = "email"),
@@ -57,5 +57,4 @@ public class User {
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false)
     private LocalDateTime updatedAt;
-
 }
