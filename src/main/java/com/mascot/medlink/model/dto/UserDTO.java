@@ -2,6 +2,7 @@ package com.mascot.medlink.model.dto;
 
 import com.mascot.medlink.model.enums.UserRole;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDateTime;
 import java.util.Collections;
@@ -10,7 +11,7 @@ import java.util.Set;
 
 
 @Getter
-@Builder
+@SuperBuilder
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserDTO {
