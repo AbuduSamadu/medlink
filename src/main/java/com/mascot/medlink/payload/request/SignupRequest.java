@@ -39,10 +39,6 @@ public class SignupRequest {
     private String password;
 
     @NotBlank
-    @Size(min = 6, max = 56)
-    private String confirmPassword;
-
-    @NotBlank
     @Size(max = 17)
     private String contact;
 
