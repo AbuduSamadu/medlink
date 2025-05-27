@@ -44,7 +44,6 @@ public class SignupService {
                 .collect(Collectors.toMap(Role::getName, role->role));
     }
 
-
     //Check if the User already exist
     public MessageResponse registerUser(SignupRequest signupRequest){
         if(userRepository.existsByEmail(signupRequest.getEmail())){
