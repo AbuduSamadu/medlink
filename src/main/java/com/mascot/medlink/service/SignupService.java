@@ -38,7 +38,6 @@ public class SignupService {
 
         this.roleCache = loadRoleIntoCache();
     }
-
     private Map<UserRole, Role> loadRoleIntoCache() {
         return roleRepository.findAll().stream()
                 .collect(Collectors.toMap(Role::getName, role->role));
