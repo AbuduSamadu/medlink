@@ -6,7 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -20,5 +19,5 @@ public class Role {
     @Enumerated(EnumType.STRING)
     @Column(length = 20)
     private UserRole name;
-    
 }
+
